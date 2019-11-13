@@ -1,6 +1,7 @@
 import React from 'react';
 import Navegation from "./components/Header/Navegation.jsx"
 import Conten from "./components/Conten/Conten.jsx"
+import Grid from "./components/Grid/Grid.jsx";
 import './App.css';
 
 function App() {
