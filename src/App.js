@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+// Components
+import Nav from './components/Nav/Nav.jsx'
+import Home from './components/Home/Home.jsx'
+import Cursos from './components/Courses/Curso-Columns.jsx'
+import Curso from './components/Courses/Curso.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav/>
+      <Switch>
+        <Route path="/" exact component={ Home }/>
+        <Route path="/cursos/:id" component={Curso}/>
+        <Route path="/cursos" component={Cursos}/>
+        <Route component={()=>(
+          <h1>Error 404 Not Found</h1>
+        )}/>
+      </Switch>
+    </Router>
   );
 }
 
