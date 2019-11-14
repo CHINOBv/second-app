@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Grid from "../Grid/Grid.jsx";
+import Grid from "./Grid.jsx";
 import Form from "./Form/Form.jsx";
 
 class Conten extends Component {
